@@ -1,0 +1,80 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+---
+
+<BaseLayout anotherProp={'from home'}><h2>slot h2 title</h2></BaseLayout>
+<div id="map"></div>
+<script is:inline>
+let map
+// 33.99126533423817, -118.44333952995098
+function initMap() {
+  map = new google.maps.Map(document.getElementById('map'), {
+    center: { lat: 33.991, lng: -118.443 },
+    zoom: 15,
+    styles: [
+      {
+        featureType: 'all',
+        stylers: [
+          {
+            saturation: 0,
+          },
+          {
+            hue: '#e7ecf0',
+          },
+        ],
+      },
+      {
+        featureType: 'road',
+        stylers: [
+          {
+            saturation: -70,
+          },
+        ],
+      },
+      {
+        featureType: 'transit',
+        stylers: [
+          {
+            visibility: 'off',
+          },
+        ],
+      },
+      {
+        featureType: 'poi',
+        stylers: [
+          {
+            visibility: 'off',
+          },
+        ],
+      },
+      {
+        featureType: 'water',
+        stylers: [
+          {
+            visibility: 'simplified',
+          },
+          {
+            saturation: -60,
+          },
+        ],
+      },
+    ],
+  })
+}
+</script>
+<script async src="https://maps.googleapis.com/maps/api/js?key=qweqwe&callback=initMap"></script>
+
+<!-- embed iframe doesnt allow langitude/latitude in view mode as a starter location only place_id -->
+<!-- <iframe
+  width="100%"
+  height="100%"
+  style="border:0"
+  loading="lazy"
+  allowfullscreen
+  src="https://www.google.com/maps/embed/v1/place?q=place_id:qweqwe&key=qweqwe"></iframe> -->
+<style lang="scss">
+  #map {
+    width: 100%;
+    height: 30rem;
+  }
+</style>

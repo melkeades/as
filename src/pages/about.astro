@@ -1,0 +1,32 @@
+---
+import '../styles.css'
+import Nav from '../components/Nav.astro'
+let pageTitle = 'about'
+const v = 3
+const m = ['m 1', 'm 2', 'm 3', 'm 4', 'm 5']
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Astro</title>
+    <title>{pageTitle}</title>
+  </head>
+  <body>
+    <Nav myProp="about" />
+    <h1>{pageTitle}</h1>
+    <h2>h2 here</h2>
+    <p>p here</p>
+    {v === 3 ? <p>v is 3</p> : <p>v is whatever</p>}
+    <ul>
+      <!-- {m.map((mmm) => <li class="m">{mmm}</li>)} -->
+      {m.forEach((mmm) => <li class="m">{mmm}</li>)}
+    </ul>
+  </body>
+  <style>
+    a {
+      padding-right: 1rem;
+    }
+  </style>
+</html>

@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/pages/googleMapApi.astro",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1698407447519,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1698407447519,
+            "name": "Commit-0",
+            "content": "---\r\nimport BaseLayout from '../layouts/BaseLayout.astro'\r\n---\r\n\r\n<BaseLayout anotherProp={'from home'}><h2>slot h2 title</h2></BaseLayout>\r\n<div id=\"map\"></div>\r\n<script is:inline>\r\nlet map\r\n// 33.99126533423817, -118.44333952995098\r\nfunction initMap() {\r\n  map = new google.maps.Map(document.getElementById('map'), {\r\n    center: { lat: 33.991, lng: -118.443 },\r\n    zoom: 15,\r\n    styles: [\r\n      {\r\n        featureType: 'all',\r\n        stylers: [\r\n          {\r\n            saturation: 0,\r\n          },\r\n          {\r\n            hue: '#e7ecf0',\r\n          },\r\n        ],\r\n      },\r\n      {\r\n        featureType: 'road',\r\n        stylers: [\r\n          {\r\n            saturation: -70,\r\n          },\r\n        ],\r\n      },\r\n      {\r\n        featureType: 'transit',\r\n        stylers: [\r\n          {\r\n            visibility: 'off',\r\n          },\r\n        ],\r\n      },\r\n      {\r\n        featureType: 'poi',\r\n        stylers: [\r\n          {\r\n            visibility: 'off',\r\n          },\r\n        ],\r\n      },\r\n      {\r\n        featureType: 'water',\r\n        stylers: [\r\n          {\r\n            visibility: 'simplified',\r\n          },\r\n          {\r\n            saturation: -60,\r\n          },\r\n        ],\r\n      },\r\n    ],\r\n  })\r\n}\r\n</script>\r\n<script async src=\"https://maps.googleapis.com/maps/api/js?key=qweqwe&callback=initMap\"></script>\r\n\r\n<!-- embed iframe doesnt allow langitude/latitude in view mode as a starter location only place_id -->\r\n<!-- <iframe\r\n  width=\"100%\"\r\n  height=\"100%\"\r\n  style=\"border:0\"\r\n  loading=\"lazy\"\r\n  allowfullscreen\r\n  src=\"https://www.google.com/maps/embed/v1/place?q=place_id:qweqwe&key=qweqwe\"></iframe> -->\r\n<style lang=\"scss\">\r\n  #map {\r\n    width: 100%;\r\n    height: 30rem;\r\n  }\r\n</style>\r\n"
+        }
+    ]
+}

@@ -1,0 +1,37 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+---
+
+<BaseLayout anotherProp={'from home'}><h2>slot h2 title</h2></BaseLayout>
+<!-- <iframe class="about-mod__iframe" style="width: 100%; aspect-ratio: 16/9;" src="https://www.youtube.com/embed/YsC9cIdRPs0?autoplay=1" title="23-AKM-016 AKM BRAND AWARENESS-Male_5" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> -->
+<div style="width: 100%; aspect-ratio: 16/9;" id="aboutVideo" ></div>
+<script async src="https://www.youtube.com/iframe_api"></script>
+<script is:inline>
+var player;
+function onYouTubeIframeAPIReady() {
+  player = new YT.Player('aboutVideo', {
+    videoId: 'YsC9cIdRPs0', // YouTube Video ID
+    //width: 560,               // Player width (in px)
+    height: 'auto',              // Player height (in px)
+    playerVars: {
+      autoplay: 1,        // Auto-play the video on load
+      controls: 0,        // Show pause/play buttons in player
+      showinfo: 0,        // Hide the video title
+      modestbranding: 1,  // Hide the Youtube Logo
+      loop: 1,            // Run the video in a loop
+      fs: 0,              // Hide the full screen button
+      cc_load_policy: 1, // Hide closed captions
+      iv_load_policy: 3,  // Hide the Video Annotations
+      autohide: 1         // Hide video controls when playing
+    },
+    events: {
+      onReady: function (e) {
+        // e.target.setVolume(70);
+        // player.playVideo();
+      }
+    }
+  });
+
+}
+
+</script>

@@ -1,0 +1,14 @@
+---
+// import Nav from '../components/Nav.astro'
+import BaseLayout from './BaseLayout.astro'
+const { frontmatter } = Astro.props
+---
+
+<!-- <h1>{frontmatter.title}</h1> -->
+<BaseLayout pageTitle={frontmatter.title} anotherProp="from blog">
+  <p>Written by {frontmatter.author}</p>
+  <p>Published on: {frontmatter.pubDate.slice(0, 10)}</p>
+  <img src={frontmatter.image.url} width="300" alt={frontmatter.image.alt} />
+
+  <slot />
+</BaseLayout>

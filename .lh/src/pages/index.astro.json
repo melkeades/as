@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/pages/index.astro",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1698407451563,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1698407451563,
+            "name": "Commit-0",
+            "content": "---\r\nimport BaseLayout from '../layouts/BaseLayout.astro'\r\nimport { Debug } from 'astro:components'\r\n\r\nimport Fiber from '../components/3fiber'\r\nimport Theatre from '../components/theatre'\r\nimport F1 from '../components/f1'\r\nimport F2 from '../components/F2'\r\nimport F3 from '../components/F3'\r\nimport F4 from '../components/F4'\r\nimport F5 from '../components/F5'\r\nimport F6 from '../components/F6'\r\nimport F7 from '../components/F7'\r\nimport F8 from '../components/F8'\r\n---\r\n\r\n<!-- <Debug log={allJsx.length} /> -->\r\n<BaseLayout anotherProp=\"fiber\">\r\n  <!-- <Ff client:load class:list={['qwe']} /> -->\r\n  <!-- <Ff client:load slot=\"fixed\" /> -->\r\n  <!-- <Ff client:only=\"react\" is:raw><h1>slot for {children}</h1></Ff> -->\r\n\r\n  <!-- <F8  client:load /> -->\r\n  <!-- <Theatre  client:load /> -->\r\n  <!-- <Fiber client:only=\"react\" clickerNum={4}>\r\n    <h1>slot for {'{'}children{'}'} in react</h1>\r\n  </Fiber> -->\r\n</BaseLayout>\r\n\r\n<style is:global>\r\n  .htmlScreen iframe {\r\n    width: 1024px;\r\n    height: 670px;\r\n  }\r\n  .qwe {\r\n    /* opacity: 0.5 !important; */\r\n    position: fixed !important;\r\n    top: 0;\r\n    left: 0;\r\n    width: 100vw;\r\n    height: 100vh;\r\n  }\r\n  .app {\r\n    position: absolute;\r\n    left: 0;\r\n    top: 0;\r\n    width: 100%;\r\n    height: 100%;\r\n  }\r\n  body {\r\n    /* background: #333; */\r\n    /* height: 100vh; */\r\n  }\r\n  canvas {\r\n    height: 80vh;\r\n  }\r\n  #app {\r\n    background-color: #333;\r\n  }\r\n  .canvasHtml1 > div {\r\n    font-family: sans-serif;\r\n    padding: 1em;\r\n    background: #00000077;\r\n    color: white;\r\n    /* position: absolute; */\r\n    border-radius: 1em;\r\n    user-select: none;\r\n    white-space: nowrap;\r\n  }\r\n</style>\r\n"
+        }
+    ]
+}

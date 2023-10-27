@@ -1,0 +1,22 @@
+---
+const { myProp } = Astro.props
+let cl = ''
+if (myProp === 'home') {
+  cl = 'active'
+}
+---
+
+<a href="/" class=`${cl}`>Home</a>
+<a href="/threeFiber/">three fiber</a>
+<a href="/babylon/">babylon</a>
+<a href="/about/" class=`${myProp==='about'?'active':''}`>About</a>
+<a href="/blog/">Blog</a>
+<style>
+  a {
+    padding-right: 1rem;
+    color: white;
+  }
+  .active {
+    opacity: 0.5;
+  }
+</style>

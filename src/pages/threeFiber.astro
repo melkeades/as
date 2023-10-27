@@ -1,0 +1,75 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro'
+import { Debug } from 'astro:components'
+
+import Fiber from '../components/3fiber'
+import Theatre from '../components/theatre'
+import F1 from '../components/f1'
+import F2 from '../components/F2'
+// import F3 from '../components/F3'
+import F4 from '../components/F4'
+import F5 from '../components/F5'
+import F6 from '../components/F6'
+import F7 from '../components/F7'
+import F8 from '../components/F8'
+import F9 from '../components/F9'
+import App from '../components/game/App'
+// import Xr from '../components/Xr'
+// import Cxr from '../components/Cxr'
+---
+
+<!-- <Debug log={allJsx.length} /> -->
+<BaseLayout anotherProp="fiber">
+  <!-- <Ff client:load class:list={['qwe']} /> -->
+  <!-- <Ff client:load slot="fixed" /> -->
+  <!-- <Ff client:only="react" is:raw><h1>slot for {children}</h1></Ff> -->
+
+  <App client:load />
+  <!-- <Theatre  client:load /> -->
+
+  <!-- <Fiber client:only="react" clickerNum={4}>
+    <h1>slot for {'{'}children{'}'} in react</h1>
+  </Fiber> -->
+</BaseLayout>
+
+<style is:global>
+  .htmlScreen iframe {
+    width: 1024px;
+    height: 670px;
+  }
+  .qwe {
+    /* opacity: 0.5 !important; */
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+  }
+  .app {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+  body {
+    /* background: #333; */
+    /* height: 100vh; */
+  }
+  canvas {
+    height: 80vh;
+  }
+  #app {
+    background-color: #333;
+  }
+  .canvasHtml1 > div {
+    font-family: sans-serif;
+    padding: 1em;
+    background: #00000077;
+    color: white;
+    /* position: absolute; */
+    border-radius: 1em;
+    user-select: none;
+    white-space: nowrap;
+  }
+</style>
